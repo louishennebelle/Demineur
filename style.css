@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+#infos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+#btn-reset {
+  padding: 8px 20px;
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+#btn-reset:hover {
+  background: #c73652;
+}
+
+#grille {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 3px;
+}
+
+.case {
+  width: 40px;
+  height: 40px;
+  background: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+}
+
+.case:hover {
+  background: #0f3460;
+}
+
+.case.découverte {
+  background: #0f3460;
+  cursor: default;
+  border-color: #1a4a8a;
+}
+
+.case.mine {
+  background: #e94560;
+}
+
+.case.drapeau {
+  background: #16213e;
+}
+
+/* Couleurs des chiffres */
+.n1 { color: #64b5f6; }
+.n2 { color: #81c784; }
+.n3 { color: #e57373; }
+.n4 { color: #9575cd; }
+.n5 { color: #ff8a65; }
+.n6 { color: #4dd0e1; }
+.n7 { color: #f06292; }
+.n8 { color: #b0bec5; }
+
+#message {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  min-height: 2rem;
+}
+
+#message.victoire {
+  color: #81c784;
+}
+
+#message.defaite {
+  color: #e94560;
+}
